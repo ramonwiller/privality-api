@@ -1,0 +1,8 @@
+/dist
+/node_modules
+*.md
+.env
+.git
+.eslintrc.js
+.prettierrc
+npm-debug.log
