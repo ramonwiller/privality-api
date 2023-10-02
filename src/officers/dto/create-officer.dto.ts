@@ -1,5 +1,12 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { IsEmail, IsNotEmpty, IsString, IsTaxId } from 'class-validator';
+import {
+  IsEmail,
+  IsNotEmpty,
+  IsString,
+  IsTaxId,
+  MaxLength,
+  MinLength,
+} from 'class-validator';
 
 export class CreateOfficerDto {
   @ApiProperty({
@@ -31,6 +38,8 @@ export class CreateOfficerDto {
   @ApiProperty({
     description: `Senha.`,
   })
+  @MinLength(8)
+  @MaxLength(64)
   @IsString()
   password: string;
 }

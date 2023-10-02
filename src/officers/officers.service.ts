@@ -20,6 +20,10 @@ export class OfficersService {
     return user;
   }
 
+  async findByEmail(email: string) {
+    return this.repository.findByEmail(email);
+  }
+
   update(id: number, updateOfficerDto: UpdateOfficerDto) {
     return this.repository.update(id, updateOfficerDto);
   }

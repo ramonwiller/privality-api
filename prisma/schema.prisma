@@ -15,7 +15,7 @@ model Officer {
   name           String          @db.VarChar(120)
   taxId          String          @unique @db.VarChar(11)
   phone          String
-  email          String          @db.VarChar(255)
+  email          String          @unique @db.VarChar(255)
   password       String
   createdAt      DateTime        @default(now())
   updatedAt      DateTime        @updatedAt
@@ -47,7 +47,7 @@ model User {
   taxId     String   @unique @db.VarChar(11)
   birtyhday DateTime
   phone     String   @db.VarChar(255)
-  email     String   @db.VarChar(255)
+  email     String   @unique @db.VarChar(255)
   password  String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
